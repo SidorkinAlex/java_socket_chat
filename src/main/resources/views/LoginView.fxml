@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="140.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.LoginController">
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Логин: " GridPane.rowIndex="0" />
+                <TextField fx:id="tfLogin" onAction="#loginButtonAction" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" />
+
+                <Label text="Пароль: " GridPane.rowIndex="1" />
+                <PasswordField fx:id="tfPass" onAction="#loginButtonAction" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+
+                <Label fx:id="lResponse" alignment="CENTER" contentDisplay="CENTER" prefWidth="290.0" text="Войдите в чат по логину и паролю" textAlignment="CENTER" BorderPane.alignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="2" HBox.hgrow="ALWAYS" />
+
+                <BorderPane GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+                    <left>
+                        <Button id="bRegister" contentDisplay="LEFT" mnemonicParsing="false" onAction="#registerButtonAction" text="Зарегистрироваться" BorderPane.alignment="CENTER" />
+                    </left>
+
+                    <right>
+                        <Button id="bLogin" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#loginButtonAction" text="Войти" BorderPane.alignment="CENTER" />
+                    </right>
+
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" />
+                    </BorderPane.margin>
+                </BorderPane>
+            </children>
+            <GridPane.margin>
+                <Insets right="10.0" top="10.0" />
+            </GridPane.margin>
+            <rowConstraints>
+                <RowConstraints prefHeight="40.0" />
+                <RowConstraints prefHeight="40.0" />
+                <RowConstraints prefHeight="40.0" />
+            <RowConstraints />
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+        </GridPane>
+    </center>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</BorderPane>
